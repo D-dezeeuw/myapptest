@@ -1,0 +1,401 @@
+html,body{
+  margin: 0;
+}
+body, input, textarea {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+}
+
+textarea, input {
+  background-color: #fff;
+}
+
+#container a.button {
+  float: right;
+  display:block;
+  background-color:coral;
+  font-weight: 700;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration : none;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid coral;
+}
+#container a.button:hover{
+  background-color: #fff;
+  color: coral;
+  border: 1px solid coral;
+  transition: all 0.1s ease-in-out;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.header-bg{
+  display:block;
+  width: 960px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 6px 12px;
+  color: #fff;
+  box-shadow: 0 4px 8px 1px rgba(0,0,0,0.2);
+  background: #4D148C url('/images/bg_header.png') 50% -5px no-repeat;
+  background-size: 120%;
+}
+
+#header {
+  width: 100vw;
+  background-color:#4D148C;
+}
+
+#sectionChat {
+  background: url('/images/bg_section_chat.jpeg') no-repeat center center fixed;
+  background-size: 120%;
+  padding: 36px 0;
+}
+
+#sectionChat,
+#sectionContent {
+  width:100vw;
+  background-size: cover;
+  min-height: 250px;
+}
+#sectionContent{
+  max-width: 1160px;
+  margin: 0 auto;
+  background: url('/images/bg_content.png') no-repeat top center;
+  background-size: contain;
+  min-height: 500px;
+
+}
+
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: rgb(255,255,255);
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  padding: 16px;
+  box-shadow: 0 2px 12px 0px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+#input-container {
+  margin: 12px 0;
+}
+
+#input{
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 12px;
+  margin-right: 12px;
+  width: 100%;
+  box-sizing:border-box;
+}
+
+#output {
+  position: relative;
+  height: 300px;
+  padding: 12px 12px 36px 12px;
+  overflow-y: auto;
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 6px 6px 18px 18px;
+  background: #f5f8fA;
+  margin: 0 0 6px 0;
+}
+
+
+#output li {
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  z-index: 3;
+  position: relative;
+}
+#output li span{
+  display: inline-block;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+/* Even - User roles - right aligned */
+#output li.role-user {
+  text-align: right;
+  padding-left: 40%;
+}
+
+
+#output li.role-user span{
+  background: rgb(211, 243, 255);
+  position: relative;
+}
+
+.role-info span{
+  color:#114499;
+}
+.role-error span{
+  color:#991144;
+}
+
+/* #output li.role-user span:before {
+  content: " ";
+  position: absolute;
+  top: calc(100% - 7px);
+  
+  border: solid transparent;
+  height: 10px;
+  width: 10px;
+  pointer-events: none;
+  
+  box-shadow: 1px 1px 1px 0px rgb(0 0 0 / 18%);
+} */
+
+
+/* Odd - System roles - left aligned */
+#output li.role-system {
+  width: 60%;
+}
+
+/* balloon arrow */
+#output li span:before {
+  content: " ";
+  position: absolute;
+  top: calc(100% - 8px);
+  border: solid transparent;
+  height: 12px;
+  width: 10px;
+  pointer-events: none;
+  box-shadow: 1px 1px 1px 0px rgb(0 0 0 / 18%);
+}
+
+#output li.role-system span:before {
+  left: 15px;
+  background-color: #fff;
+  transform: rotate(43deg) skewX(-15deg);
+}
+
+#output li.role-user span:before {
+  left: 88%;
+  background-color: rgb(211, 243, 255);
+  transform: rotate(45deg) skewX(20deg);
+}
+
+#output li.role-system span{
+  background:#fff;
+  border: 1px solid rgb(224, 224, 224)
+}
+
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#container a, a:visited {
+  color: #336699;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+#container a:hover, a:active {
+  color: #33aaFF;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Model toggle */
+.toggle {
+  width: 48px;
+  height: 24px;
+  border-radius: 24px;
+  border: 0.1rem solid #999;
+  background: #bfb;
+  position: relative;
+  box-shadow: inset 0px 3px 3px 0 rgba(0,0,0,0.4);
+  transition: background-color 0.3s ease-in-out;
+  display: inline-block;
+  margin-right: 146px;
+}
+
+.toggle::after {
+  content: ' ';
+  transition: left 0.3s ease-in-out;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  display:block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow:0px 3px 3px 0 rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: " ";
+  position: absolute;
+  left: calc(100% + 16px);
+  white-space:nowrap;
+  top: 3px;
+  color: #999;
+}
+
+
+
+.toggle.on {
+  background: #9cf;
+  transition: background-color 0.3s ease-in-out;
+}
+.toggle.on::after {
+  left: calc(100% - 24px);
+}
+
+#modeltoggle::before {
+  content: "model: chatgpt";
+}
+#modeltoggle.on::before {
+  content: "model: fedex";
+}
+
+#conversationtoggle::before {
+  content: "model: conversational context on";
+}
+#conversationtoggle.on::before {
+  content: "model: conversational context off";
+}
+
+/* dependable toggles */
+#modeltoggle ~ #conversationtoggle{
+  visibility: hidden;
+}
+#modeltoggle.on ~ #conversationtoggle{
+  visibility: visible;
+}
+
+.debugmenu{
+  border-top: 1px solid #aaa;
+  background: #fff;
+  box-shadow: -5px 0px 12px 0px rgba(0,0,0,0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.debugmenu .debugcontainer{
+  padding: 12px 4px 10px 4px;
+  display: flex;
+  flex-direction: row;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.debugmenu .debugcontainer > span {
+  margin-right: 16px;
+  padding-top: 3px;
+  color: #666;
+}
+
+/* continue button */
+div.button.button-continue {
+  background: coral;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  border: 1px solid coral;
+  font-size: 0.765rem;
+  box-shadow: 0 2px 5px 0px rgba(0,0,0,0.2);
+  position: absolute;
+  z-index: 1000;
+  bottom: 133px;
+  left: 455px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+div.button.button-continue:hover {
+  background: #fff;
+  color: coral;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+/* Typing icon */
+div#typing {
+  background: url(/images/typing.gif) -3px -6px no-repeat;
+  background-size: cover;
+  width: 48px;
+  height: 24px;
+  border-radius: 6px;
+  display: inline-block;
+  position: absolute;
+  z-index: 9;
+  bottom: 100px;
+  left: 29px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+}
+
+.prompts {
+  position: relative;
+  width: 32px;
+  overflow: shown;
+}
+
+.promptbutton {
+  background: coral;
+  color: #fff;
+  outline: none;
+  border: 1px solid coral;
+  height: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.promptbutton:hover {
+  background: #fff;
+  color: coral;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.promptlist {
+  position: absolute;
+  top: 0;
+  left: 28px;
+  width: 200px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+  border:1px solid coral;
+}
+
+.promptlist ul.promptitems {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.promptitems li {
+  list-style-type: none;
+  font-size: 0.765rem;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.promptitems li:hover {
+  background: #eee;
+}

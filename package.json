@@ -1,0 +1,17 @@
+{
+  "name": "myapptest",
+  "version": "1.0.0",
+  "description": "integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["test"],
+  "author": "D. de Zeeuw",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.2.1"
+  }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>FedEx Innovation Sprint: ChatGPT</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <script type="application/json" data-config="js-chat-config">
+      {
+        "model": null,
+        "conversationHistory": false,
+        "messages": [],
+        "controlPressed": false,
+        "finishReason": "stop",
+        "user": {
+          "name": "John Doe",
+          "address": "6th Street 1337, Austin, Texas",
+          "phone": "555-555-5555",
+          "country": "USA",
+          "package": "1 box of 10 widgets stuck at customs"
+        },
+        "systemContext": {},
+        "language": {
+          "active": "en",
+          "en": {
+            "base": "https://www.fedex.com/",
+            "locale": "en-gb/",
+            "welcome": "Welcome %%name%%, I am the FedEx Virtual Assistant. How can I help you?",
+            "validation": "Please enter a question longer than 2 and shorter than 2048 characters.",
+            "error": "Sorry something went wrong; could not get a response of the server. Please try again.",
+            "continue": "Continue.",
+            "continueText": "Continue the following text:",
+            "prompts": [
+              "Where is my package?",
+              "Why is my package stuck at customs?",
+              "How do I file a claim?",
+              "How can I reschedule a delivery?",
+              "How can I track my parcel without a tracking number?",
+              "Can I get a proof of delivery?",
+              "Who pays duties and taxes?",
+              "How do I calculate duties?",
+              "How do I cancel a shipment?",
+              "How do I reprint my air waybill?"
+            ],
+            "stringModifications": [
+              {
+                "str": "fedex.com",
+                "url": "home.html"
+              },
+              {
+                "str": "call",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "contact information",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "email",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "contact us",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "faq",
+                "url": "customer-support/faq.html"
+              },
+              {
+                "str": "billing",
+                "url": "customer-support/billing.html"
+              },
+              {
+                "str": "homepage",
+                "url": "home.html"
+              },
+              {
+                "str": "contact page here",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "tracking number",
+                "url": "tracking.html"
+              },
+              {
+                "str": "reference number",
+                "url": "tracking.html"
+              },
+              {
+                "str": "FedEx Tracking",
+                "url": "tracking.html"
+              },
+              {
+                "str": "frequently asked questions",
+                "url": "customer-support/faq.html"
+              },
+              {
+                "str": "Delivery Manager",
+                "postfix": "(US only)",
+                "url": "/delivery-manager.html"
+              },
+              {
+                "str": "submit a claim",
+                "url": "customer-support/claims.html"
+              },
+              {
+                "str": "File a claim",
+                "url": "customer-support/claims.html"
+              },
+              {
+                "str": "international shipping",
+                "url": "shipping.html"
+              },
+              {
+                "str": "Custom Tools",
+                "url": "customs-tools.html"
+              },
+              {
+                "str": "Ship Manager",
+                "url": "https://www.fedex.com/en-us/shipping/ship-manager/software.html"
+              }
+            ]
+          },
+          "nl": {
+            "base": "https://www.fedex.com/",
+            "locale": "nl-nl/",
+            "welcome": "Welkom bij de FedEx assistent. Waarmee kan ik u van dienst zijn?",
+            "validation": "Voer alstublieft een vraag in die meer heeft dan 2 en minder dan 2048 karakters.",
+            "error": "Excuses er gaat iets fout; Ik krijg een verkeerd bericht vanuit het programma. Probeer het nog eens.",
+            "continue": "Ga door.",
+            "continueText": "Ga verder met de volgende tekst:",
+            "prompts": [
+              "Waar is mijn pakket?",
+              "Waarom zit mijn pakket vast bij de douane?",
+              "Hoe kan ik een claim indienen?",
+              "Hoe kan ik een levering verzetten?"
+            ],
+            "stringModifications": [
+              {
+                "str": "contact os",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "Bel ons",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "Schrijf ons",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "Email",
+                "url": "customer-support.html"
+              },
+              {
+                "str": "contact pagina hier",
+                "url": "tracking.html"
+              },
+              {
+                "str": "traceernummer",
+                "url": "tracking.html"
+              },
+              {
+                "str": "Ondersteuning",
+                "url": "customer-support/faq.html"
+              },
+              {
+                "str": "Veelgestelde vragen",
+                "url": "customer-support/faq.html"
+              },
+              {
+                "str": "Delivery Manager",
+                "postfix": "(US only)",
+                "url": "/delivery-manager.html"
+              },
+              {
+                "str": "Verstuur een klacht",
+                "url": "customer-support/contact.html"
+              },
+              {
+                "str": "claim indienen",
+                "url": "customer-support/contact.html"
+              },
+              {
+                "str": "facturering",
+                "url": "customer-support/billing.html"
+              }
+            ]
+          },
+          "cn": {
+            "welcome": "欢迎使用联邦快递助手。我可以为您提供什么帮助？",
+            "validation": "请输入长度大于2且小于2048个字符的问题。",
+            "error": "抱歉，发生了错误；无法获取服务器的响应。请重试。",
+            "continue": "继续。",
+            "continueText": "继续以下文本："
+          }
+        }
+      }      
+    </script>
+    <div style="font-size: 0.875rem; background:red;color:white;width: 100%; padding: 16px 32px;text-align:center;font-weight:bold">
+      WARNING: This is a prototype made from a 10 day Innovation Session. It is not a production ready product.<br />Stuff will break, and responses might not what you expect to be. 
+      <span style="font-weight:normal">With all that said, have fun!</span>
+    </div>
+    <div id="header">
+      <div class="header-bg">
+      </div>
+    </div>
+    
+    <div id="sectionChat">
+      <div id="container">
+        <div id="continueConversation" class="button button-continue hidden">... continue</div>
+        <div id="typing" class="hidden"></div>
+        <ul id="output"></ul>
+        <div id="input-container" class="flex">
+          <div class="prompts">
+            <button type="button" id="promptbutton" alt="Select a question" class="promptbutton">...</button>
+            <div class="promptlist hidden">
+              <ul class="promptitems"></ul>
+            </div>
+          </div>
+          <input aria-label="input" type="text" id="input" placeholder="Type your question here" value=""></input>
+          <a id="sendButton" class="button" href="#">Send</a>
+        </div>
+      </div>
+    </div>
+    <div id="sectionContent"></div>
+    <div class="debugmenu">
+      <div class="debugcontainer">
+        <span>Debug: </span>
+        <div id="modeltoggle" class="toggle on"></div>
+        <div id="conversationtoggle" class="toggle on"></div>
+      </div>
+    </div>"
+  </body>
+</html>
